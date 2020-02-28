@@ -82,6 +82,7 @@ brew install woff2
 #brew install exiv2
 brew install git
 # brew install git-lfs
+# brew install gs
 # brew install imagemagick --with-webp
 # brew install lua
 # brew install lynx
