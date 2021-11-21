@@ -147,9 +147,9 @@
 	changed = green
 	untracked = cyan
 
-# [commit]
-# 	# https://help.github.com/articles/signing-commits-using-gpg/
-# 	gpgsign = true
+[commit]
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
 
 [diff]
 
@@ -210,3 +210,15 @@
 [pull]
 
 	rebase = true
+
+[user]
+
+	name = Vikram Tiwari
+	email = vikramtheone1@gmail.com
+	signingkey = 627ACF9F93B567D8EC4E4C2F19914EBEEEF8A4DC
+
+[gpg]
+	program = /usr/local/bin/gpg
+
+[credential]
+	helper = osxkeychain
