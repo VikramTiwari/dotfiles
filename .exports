@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Set bash as our shell, idk why anyone would use something else ;)
+shell="$(which bash)";
+export SHELL="$shell";
+
 # Make vim the default editor.
 export EDITOR='vim';
 
@@ -36,7 +40,3 @@ export GPG_TTY=$(tty);
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
-# NVM loader and completion
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

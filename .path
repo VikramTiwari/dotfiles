@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# update path
+export PATH=/usr/local/bin:${PATH}:/sbin:/usr/local/sbin
+
+# The next line updates PATH for the Google Cloud SDK.
+# shellcheck source=/dev/null
+if [ -f "${HOME}/.google-cloud-sdk/path.bash.inc" ]; then . "${HOME}/.google-cloud-sdk/path.bash.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+# shellcheck source=/dev/null
+if [ -f "${HOME}/.google-cloud-sdk/completion.bash.inc" ]; then . "${HOME}/.google-cloud-sdk/completion.bash.inc"; fi
+
+export PATH="${HOME}/.google-cloud-sdk/bin:${PATH}"
+
+# update path for Chromium depot_tools
+export PATH="${PATH}:${HOME}/depot_tools"
+
+# Add bash completion for Chromium depot_tools
+# shellcheck source=/dev/null
+if [ -f "${HOME}/depot_tools/git_cl_completion.sh" ]; then . "${HOME}/depot_tools/git_cl_completion.sh"; fi
+
+# Homebrew
+export PATH="/opt/homebrew/bin:${PATH}"
+export LIBRARY_PATH="/opt/homebrew/lib:${LIBRARY_PATH}"
+export LDFLAGS="${LDFLAGS} -L/opt/homebrew/lib"
+export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/include"
+
+# LLVM
+export PATH="/opt/homebrew/opt/llvm/bin:${PATH}"
+
+# NVM loader and completion
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

@@ -152,3 +152,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Get CPU die temperature
 alias heat='sudo powermetrics --samplers smc |grep -i "CPU die temperature"'
+
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_ed25519.pub | xclip -selection clipboard | echo '=> Public key copied to pasteboard.'"
