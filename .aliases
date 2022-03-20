@@ -155,3 +155,6 @@ alias heat='sudo powermetrics --samplers smc |grep -i "CPU die temperature"'
 
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_ed25519.pub | xclip -selection clipboard | echo '=> Public key copied to pasteboard.'"
+
+# add tailscale to CLI
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
