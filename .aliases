@@ -158,3 +158,6 @@ alias pubkey="more ~/.ssh/id_ed25519.pub | xclip -selection clipboard | echo '=>
 
 # add tailscale to CLI
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+# get network quality check
+alias speedtest='networkQuality -v'
