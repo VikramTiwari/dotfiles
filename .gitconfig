@@ -177,6 +177,8 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	# automatically create a new branch upstream if it's not present
+	autoSetupRemote = true
 
 # URL shorthands
 
